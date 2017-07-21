@@ -127,6 +127,14 @@ for (i=1; i<lines.length; i++) {
 							setThreshold(80, 255);
 							roiManager("Select",i );
 							run("Measure");
+							var1=getResult("%Area",nResults-1);
+							print(var1);
+							File.append(t+","+var1,dir[2]+"MME.csv");
+							var2=getResult("Area",nResults-1);
+							print(var1);
+							File.append(t+","+var2,dir[2]+"GlomArea.csv");
+							
+							
 						} else {
 								print ("FILEName_ERROR");
 							}
